@@ -1,0 +1,98 @@
+
+.box {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+hr {
+    margin: 20px 0 10px 0;
+}
+.center {
+    text-align: center;
+}
+#main {
+    margin-top: 100px;
+    text-align: center;
+}
+#main .wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+#main h1 {
+    font-size: 4em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+#main p {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+#main .btn {
+    text-transform: uppercase;
+    padding: 7px 15px;
+}
+.float-right {
+    float: right;
+}
+.add-task {
+    display: inline;
+}
+.inline {
+    display: inline;
+}
+.todolist input,
+.todolist input[placeholder] {
+    text-align: left;
+}
+#footer .navbar-text {
+    width: 100%;
+    text-align: center;
+}
+.todolist {
+    background-color: #FFF;
+    padding: 20px 20px 10px 20px;
+    margin-top: 30px;
+}
+.todolist h1 {
+    margin: 0;
+    padding-bottom: 20px;
+}
+.form-control {
+    border-radius: 5px;
+    width: 75%;
+    display: inline;
+}
+li.ui-state-default {
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px;
+}
+li.ui-state-default:last-child {
+    border-bottom: none;
+}
+.todo-footer {
+    background-color: #F4FCE8;
+    margin: 0 -20px -10px -20px;
+    padding: 10px 20px;
+}
+
+span.TodoTitle {
+    padding-left: 10px;
+}
+.inputEdit {
+    width: 75%;
+}
+@media screen and (max-width: 768px) {
+    .navbar-default,
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+    }
+    .nav>li {
+        display: inline;
+    }
+    .nav>li>a {
+        display: inline;
+    }
+}

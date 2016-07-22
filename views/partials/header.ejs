@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TodoBakers</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <meta content="width=device-width" name="viewport">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="/js/script.js"></script>
+        <link rel="stylesheet" href="/stylesheets/app.css" type="text/css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default "> 
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">TodoBakers</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(!currentUser) { %> 
+                        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <% } else{ %> 
+                        <li><a href=""><span class="glyphicon glyphicon-user"></span> <%= currentUser.username %></a></li>
+                        <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </nav>
+ 
+   
+    
+    
