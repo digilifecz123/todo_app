@@ -1,0 +1,11 @@
+/home/ubuntu/workspace/AuthDemo
+|-- app.js
+|-- models
+|-- node_modules
+|-- out.txt
+|-- package.json
+|-- public
+|-- tree_out
+`-- views
+
+directory: 4 file: 4 
