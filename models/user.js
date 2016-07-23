@@ -1,6 +1,6 @@
-// ========== 
+// ==========
 // MongoDB & Mongoose setup - User registration
-// ========== 
+// ==========
 
 
 var mongoose = require("mongoose"),
