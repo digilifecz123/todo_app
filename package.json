@@ -1,5 +1,5 @@
 {
-  "name": "authdemo",
+  "name": "todo_app",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -19,5 +19,8 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
   }
 }
