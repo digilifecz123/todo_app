@@ -5,8 +5,11 @@ var express = require("express");
 var router = express.Router();
 var User = require("../models/user");
 var task = require("../models/todo");
+var middleware = require('../middleware/index.js')
 
-router.get("/secret", isLoggedIn, function(req, res) {
+
+
+router.get("/secret", middleware.isLoggedIn, function(req, res) {
     task.find({}, function(err, tasks) {
         if (err) {
             console.log(err);
@@ -31,7 +34,7 @@ router.delete("/secret/:id", function(req, res) {
 });
 
 // Create a new task
-router.post("/secret", function(req, res) {
+router.post("/secret",middleware.isLoggedIn, function(req, res) {
     // create Todo
     task.create(req.body.task, function(err) {
         if (err) {
@@ -52,13 +55,4 @@ router.put("/secret/:id", function(req, res) {
         }
     });
 });
-
-function isLoggedIn(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next()
-    }
-    res.redirect("/login")
-}
-
-
 module.exports = router;

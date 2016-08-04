@@ -7,6 +7,7 @@
 var express = require("express"),
     mongoose = require("mongoose"),
     passport = require("passport"),
+    flash    = require('connect-flash'),
     // this handles req.body
     bodyParser = require("body-parser"),
     LocalStrategy = require("passport-local"),
@@ -25,6 +26,8 @@ var express = require("express"),
 mongoose.connect("mongodb://localhost/auth_todo_app");
 // We dont have to write .ejs anymore
 app.set("view engine", "ejs");
+
+app.use(flash());
 
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({
@@ -49,6 +52,8 @@ passport.deserializeUser(User.deserializeUser());
 // this line is for sharing req.user for all routes
 app.use(function(req, res, next) {
     res.locals.currentUser = req.user;
+    res.locals.error = req.flash('error');
+    res.locals.success = req.flash('success');
     // move to next handler
     next();
 });
