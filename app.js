@@ -23,7 +23,9 @@ var express = require("express"),
 // DATABASE
 // ==================================================
 // Setting up mongoose
-mongoose.connect("mongodb://localhost/auth_todo_app");
+// mongoose.connect("mongodb://localhost/ntodoappnodejs");
+mongoose.connect("mongodb://root:root@ds161475.mlab.com:61475/ntodoappnodejs");
+
 // We dont have to write .ejs anymore
 app.set("view engine", "ejs");
 
