@@ -26,8 +26,6 @@ var express = require("express"),
 // ==================================================
 // Setting up mongoose
 mongoose.connect(process.env.DATABASEURL);
-mongoose.connect("mongodb://root:root@ds161475.mlab.com:61475/ntodoappnodejs");
-
 // We dont have to write .ejs anymore
 app.set("view engine", "ejs");
 
