@@ -4,40 +4,39 @@
 // SETUP
 // ==================================================
 
-var express = require("express"),
-    mongoose = require("mongoose"),
-    passport = require("passport"),
-    flash    = require('connect-flash'),
+const express = require("express")
+const mongoose = require("mongoose")
+const passport = require("passport")
+const flash = require('connect-flash')
     // this handles req.body
-    bodyParser = require("body-parser"),
-    LocalStrategy = require("passport-local"),
-    methodOverride = require("method-override"),
-    User = require("./models/user"),
-    task = require("./models/todo"),
-    todoRoutes = require('./routes/todo'),
-    indexRoutes = require('./routes/index'),
-    app = express();
-
-    var port = process.env.PORT || 3000;
+const bodyParser = require("body-parser")
+const LocalStrategy = require("passport-local")
+const methodOverride = require("method-override")
+const User = require("./models/user")
+const task = require("./models/todo")
+const todoRoutes = require('./routes/todo')
+const indexRoutes = require('./routes/index')
+const app = express();
+const port = process.env.PORT || 3000;
 
 
 // ==================================================
 // DATABASE
 // ==================================================
 // Setting up mongoose
-mongoose.connect(process.env.DATABASEURL);
+let url = 'mongodb://localhost/1';
+
+mongoose.connect(url);
 // We dont have to write .ejs anymore
 app.set("view engine", "ejs");
-
 app.use(flash());
-
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
 // Now we can use folder static for js and css
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(`${__dirname}/public`));
 app.use(require("express-session")({
     // this sentence is for decode and encode sessions
     secret: "TodoBakers is the best todo app ever.",
@@ -67,5 +66,5 @@ app.use(indexRoutes)
 // ==================================================
 
 app.listen(port, () =>
-    console.log('Example app listening on port ' + port + '!')
+    console.log(`Example app listening on port ${port} !`)
 );
