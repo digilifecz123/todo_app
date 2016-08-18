@@ -1,11 +1,11 @@
 'use strict';
 
-let express = require("express");
-let passport = require("passport");
-let LocalStrategy = require("passport-local");
-let User = require("../models/user");
-let middleware = require('../middleware/index.js')
-let router = express.Router();
+var express = require("express");
+var passport = require("passport");
+var LocalStrategy = require("passport-local");
+var User = require("../models/user");
+var middleware = require('../middleware/index.js')
+var router = express.Router();
 
 // ==========
 // AUTHENTICATING ROUTE

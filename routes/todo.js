@@ -1,11 +1,11 @@
 'use strict';
 
 
-let express = require("express");
-let router = express.Router();
-let User = require("../models/user");
-let task = require("../models/todo");
-let middleware = require('../middleware/index.js')
+var express = require("express");
+var router = express.Router();
+var User = require("../models/user");
+var task = require("../models/todo");
+var middleware = require('../middleware/index.js')
 
 
 
@@ -22,8 +22,8 @@ router.get("/secret", middleware.isLoggedIn, function(req, res) {
     });
 });
 
-// Delete a taks
-router.delete("/secret/:id", function(req, res) {
+// Devare a taks
+router.devare("/secret/:id", function(req, res) {
     task.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
             res.redirect("/secret");
