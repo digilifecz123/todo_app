@@ -3,10 +3,10 @@
 // ==========
 
 
-var mongoose = require("mongoose"),
+let mongoose = require("mongoose"),
     passportLocalMongoose = require("passport-local-mongoose")
 
-var UserSchema = new mongoose.Schema({
+let UserSchema = new mongoose.Schema({
     username: String,
     passport: String
 });

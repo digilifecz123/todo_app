@@ -1,17 +1,17 @@
-var $;
+let $;
 
 $(document).ready(function() {
   // Fire function countTodos
   countTodos();
  // Function countTodos counts tasks
   function countTodos() {
-    var count = $("#sortable li").length;
+    let count = $("#sortable li").length;
     $('.count-todos').html(count);
     }
     $('.updateTodoButton').on('click', function() {
 
-    var $TodoTitle = $(".TodoTitle");
-    var $TodoInputForm = $(".updateTodoForm");
+    let $TodoTitle = $(".TodoTitle");
+    let $TodoInputForm = $(".updateTodoForm");
 
     $(this).siblings(".TodoTitle").toggleClass("hide");
     $(this).siblings(".updateTodoForm").toggleClass("hide");
@@ -26,13 +26,13 @@ $(document).ready(function() {
   // $TodoInputForm.toggleClass("hide");
 
   //   $('#updateTodoButton').on('click', function() {
-  //     var $TodoTitle = $("#TodoTitle");
-  //     var $TodoInputForm = $("#updateTodoForm");
+  //     let $TodoTitle = $("#TodoTitle");
+  //     let $TodoInputForm = $("#updateTodoForm");
   //     $TodoTitle.toggleClass("hide");
   //     $TodoInputForm.toggleClass("hide");
   // });  
 
-  // var data = 
+  // let data = 
   // {
   //     params: {
   //       id: TodoId
