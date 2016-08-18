@@ -1,9 +1,9 @@
 // ==========
 // MongoDB & Mongoose setup -  tasks
 // ==========
-let mongoose = require("mongoose")
+var mongoose = require("mongoose")
 
-let Todo = new mongoose.Schema({
+var Todo = new mongoose.Schema({
     user_id: String,
     title: String,
     updated_at: Date
