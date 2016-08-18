@@ -24,8 +24,7 @@ const port = process.env.PORT || 3000;
 // DATABASE
 // ==================================================
 // Setting up mongoose
-let url = 'mongodb://localhost/1';
-
+let url = process.env.DATABASEURL || 'mongodb://localhost/ntodoappnodejs';
 mongoose.connect(url);
 // We dont have to write .ejs anymore
 app.set("view engine", "ejs");
