@@ -16,7 +16,6 @@
     "ejs-locals": "^1.0.2",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
-    "jQuery": "^1.7.4",
     "method-override": "^2.3.6",
     "mongoose": "^4.4.19",
     "passport": "^0.3.2",
